@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/doc_formatting
+    username: doc_user
+    password: doc_pass
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+logging:
+  level:
+    root: INFO
+    com.example.docformatting: DEBUG
+
+file-storage:
+  base-dir: ./storage

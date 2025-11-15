@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: doc-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: doc_formatting
+      POSTGRES_USER: doc_user
+      POSTGRES_PASSWORD: doc_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: doc-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  pgdata:
