@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: doc-formatting-platform
+  profiles:
+    active: dev
+
+file-storage:
+  base-dir: ./storage
+
+server:
+  port: 8080
+
+job:
+  async-enabled: true

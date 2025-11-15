@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://prod-db:5432/doc_formatting
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+logging:
+  level:
+    root: INFO
+
+file-storage:
+  base-dir: /opt/app/storage
